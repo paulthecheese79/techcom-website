@@ -1,0 +1,235 @@
+/* Transparent fixed navbar */
+.content-navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+}
+
+/* Logo left */
+.content-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.content-navbar-logo-icon {
+  font-size: 1.8rem;
+}
+
+.content-navbar-logo-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Center nav links */
+.content-navbar-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-navbar-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.content-navbar-menu-item hr {
+  border: none;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  transition: 0.2s ease;
+}
+
+.content-navbar-menu-item.active hr {
+  background-color: white;
+}
+
+/* Right button */
+.content-navbar-auth {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.content-navbar-auth button.btn-login-transparent {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.content-navbar-auth button.btn-login-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .content-navbar-menu {
+    display: none;
+  }
+  .content-navbar-auth {
+    display: none;
+  }
+}
+
+/* Disable Link When Not Logged In */
+.disabled-link {
+  color: #999;
+  pointer-events: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover Effects for Center Links */
+.content-link {
+  transition: transform 0.2s ease, font-weight 0.2s ease;
+}
+
+.content-link:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+/* Transparent Login Button */
+.btn-login-transparent {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-login-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Modal Styles */
+/* Modal Overlay */
+.logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Container */
+.logout-modal {
+  position: relative;
+  background-color: var(--background-light);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  width: 360px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Close (X) Button */
+.logout-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.logout-close-button:hover {
+  color: var(--button-hover);
+}
+
+/* Modal Title */
+.logout-modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Modal Message */
+.logout-modal p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+/* Button Group */
+.logout-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Confirm and Cancel Buttons */
+.logout-modal-buttons button {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-modal-buttons .confirm-btn {
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+
+.logout-modal-buttons .confirm-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.logout-modal-buttons .cancel-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.logout-modal-buttons .cancel-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Contact Page Navbar */
+.solid-navbar {
+  position: sticky;
+  background-color: var(--primary-color); /* or any solid color from root */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional shadow */
+}

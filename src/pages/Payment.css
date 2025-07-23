@@ -1,0 +1,94 @@
+/* Payment.css */
+.payment-page {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  padding: 25px 20px;
+  border-top: 4px solid var(--accent-color);
+  transition: transform 0.2s;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-header h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.package-badge {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.package-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.package-highlight {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.package-features {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.package-features li {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.btn-purchase {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-purchase:hover {
+  background-color: var(--button-hover);
+}

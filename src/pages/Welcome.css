@@ -1,0 +1,185 @@
+/* Apply font and background */
+
+.welcome-container {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-color);
+}
+
+/* ===== Cover Section ===== */
+.cover-section {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-content {
+  z-index: 2;
+}
+
+.cover-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Carousel Images ===== */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px;
+  }
+}
+
+/* ===== Transparent Navbar ===== */
+.navbar {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* ===== Transparent Login Button ===== */
+.btn-login-transparent {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-login-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* ===== Agenda Section ===== */
+.agenda-section {
+  background-color: #f0ede4;
+  padding: 3rem 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.agenda-video-card {
+  position: relative;
+  width: 380px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.agenda-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agenda-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.agenda-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5e548e;
+}
+
+/* ===== Sign Up Section ===== */
+.signup-cta-section {
+  background-color: var(--text-color);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0;
+}
+
+.signup-cta-wrapper {
+  min-height: 400px;
+  width: 100%;
+}
+
+.signup-cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-image {
+  height: 100%;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.signup-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.signup-text {
+  max-width: 500px;
+}
+
+.signup-highlight {
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.signup-highlight .cta-sub {
+  color: var(--footer-text);
+  font-weight: normal;
+}
+
+.signup-btn {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.signup-content {
+  background-color: var(--text-color);
+  padding: 2rem;
+  height: 100%;
+}
+
+.signup-title {
+  font-size: 2rem;
+  line-height: 1.3;
+}

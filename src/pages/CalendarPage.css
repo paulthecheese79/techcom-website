@@ -1,0 +1,38 @@
+/* src/pages/CalendarPage.css */
+
+.calendar-layout {
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.calendar-sidebar {
+  width: 300px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.calendar-content {
+  flex: 1;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+  height: 100vh;
+}
+
+.calendar-top-bar {
+  width: 100%;
+  background-color: #78766d; /* or any highlight color */
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+}
