@@ -49,7 +49,7 @@ const LoginModal = ({ onClose, onLogin }) => {
           <label>
             <input type="checkbox" /> Remember Me
           </label>
-          <a href="#">Forgot Password?</a>
+          Forgot Password?
         </div>
 
         {error && <div className="error-message">{error}</div>}
