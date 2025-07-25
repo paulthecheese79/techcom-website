@@ -36,7 +36,7 @@ const events = [
   },
 ];
 
-const CalendarMain = () => {
+const CalendarMain = ({ onMonthChange }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedContent, setSelectedContent] = useState(null);
 
@@ -46,6 +46,12 @@ const CalendarMain = () => {
       setSelectedContent(content);
       setShowModal(true);
     }
+  };
+
+   const handleDatesSet = (dateInfo) => {
+    const currentMonth = dateInfo.start.getMonth(); // 0-indexed
+    const currentYear = dateInfo.start.getFullYear();
+    onMonthChange({ month: currentMonth, year: currentYear });
   };
 
   const handleClose = () => setShowModal(false);
@@ -59,6 +65,7 @@ const CalendarMain = () => {
         showNonCurrentDates={false}
         fixedWeekCount={false}
         dateClick={handleDateClick}
+        datesSet={handleDatesSet}
         height={900}
         contentHeight={600}
       />

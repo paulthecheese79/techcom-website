@@ -1,63 +1,39 @@
-import React, { useEffect, useState } from 'react';
+// CalendarSidebar.jsx
+import React from 'react';
 import './CalendarSidebar.css';
+import julyContent from '../data/julyContent.json';
 
-const tipList = [
-  "Use trending sound effects to boost reach.",
-  "Always include a CTA in your caption.",
-  "Post when your audience is most active.",
-  "Match visuals with seasonal themes.",
-  "Don’t forget to add your store location.",
-];
 
-const CalendarSidebar = ({ selectedDateData }) => {
-  const [dailyTip, setDailyTip] = useState('');
+const monthMap = {
 
-  useEffect(() => {
-    const index = new Date().getDate() % tipList.length;
-    setDailyTip(tipList[index]);
-  }, []);
+  6: { name: 'July', data: julyContent },
+
+};
+
+const CalendarSidebar = ({ monthInfo }) => {
+  const { month } = monthInfo;
+  const { name, data } = monthMap[month] || {};
 
   return (
     <div className="sidebar-container">
-      <div className="sidebar-section today-section">
-        <h4>📅 Today: {selectedDateData?.date || 'Select a day'}</h4>
-        {selectedDateData ? (
-          <>
-            <p><strong>Theme:</strong> {selectedDateData.theme}</p>
-            <p><strong>Video Idea:</strong> {selectedDateData.videoIdea}</p>
-            <p><strong>Hashtags:</strong> {selectedDateData.hashtags.join(' ')}</p>
-            <p><strong>Description:</strong> {selectedDateData.description}</p>
-          </>
-        ) : (
-          <p>Select a date to see content plan.</p>
-        )}
-      </div>
-
-      <div className="sidebar-section">
-        <h5>🔍 Search</h5>
-        <input type="text" placeholder="Search content..." className="sidebar-search" />
-      </div>
-
-      <div className="sidebar-section">
-        <h5>📌 Filter by Theme</h5>
-        <div className="filter-tags">
-          <button>Brand</button>
-          <button>Product</button>
-          <button>Fun</button>
-          <button>Holiday</button>
-        </div>
-      </div>
-
-      <div className="sidebar-section">
-        <h5>🧠 Tip of the Day</h5>
-        <p>{dailyTip}</p>
-      </div>
-
-      <div className="sidebar-section">
-        <h5>📁 Tools</h5>
-        <button className="sidebar-tool-btn">Download Calendar JSON</button>
-        <button className="sidebar-tool-btn">Export as PDF</button>
-      </div>
+      {name ? (
+        <>
+          <h3 className="sidebar-month">{name}</h3>
+          <ul className="sidebar-days">
+            {data.map((item, index) => (
+              <li key={index} className="sidebar-day">
+                <div className="day-number">{new Date(item.date).getDate().toString().padStart(2, '0')}</div>
+                <div className="day-theme">
+                  <p className="theme-title">{item.theme}</p>
+                  <p className="theme-label">{item.label}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p className="no-data">No content data for this month</p>
+      )}
     </div>
   );
 };
