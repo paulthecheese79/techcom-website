@@ -6,7 +6,8 @@
     "hashtags": ["#KapeSiglo", "#CoffeeLove", "#CafeVibes"],
     "description": "Kick off the month with a 15s cinematic intro of your business.",
     "videoUrl": "/videos/july/01.mp4",
-    "label": "Welcome to KapeSiglo"
+    "label": "Welcome to KapeSiglo",
+    "caption": "Start July strong with a cinematic welcome to KapeSiglo!"
   },
   {
     "date": "2025-07-02",
@@ -15,7 +16,8 @@
     "hashtags": ["#BaristaLife", "#BrewDay", "#CoffeeCraft"],
     "description": "Show the skill and care behind each cup of coffee.",
     "videoUrl": "/videos/july/02.mp4",
-    "label": "Behind the Brew"
+    "label": "Behind the Brew",
+    "caption": "Take a peek behind the scenes of your brewing process."
   },
   {
     "date": "2025-07-03",
@@ -24,7 +26,8 @@
     "hashtags": ["#CafeMood", "#KapeSigloFeels", "#RelaxWithCoffee"],
     "description": "Highlight your store as a peaceful place to unwind.",
     "videoUrl": "/videos/july/03.mp4",
-    "label": "Cafe Ambiance"
+    "label": "Cafe Ambiance",
+    "caption": "Feel the cozy and calming vibe inside KapeSiglo."
   },
   {
     "date": "2025-07-04",
@@ -33,7 +36,8 @@
     "hashtags": ["#EidMubarak", "#CoffeeCulture", "#KapeSiglo"],
     "description": "Celebrate with your Muslim community with respect and warmth.",
     "videoUrl": "/videos/july/04.mp4",
-    "label": "Eid al-Adha Greeting"
+    "label": "Eid al-Adha Greeting",
+    "caption": "Sending warm wishes to our Muslim community this Eid al-Adha."
   },
   {
     "date": "2025-07-05",
@@ -42,7 +46,8 @@
     "hashtags": ["#SaturdayVibes", "#KapeSiglo", "#WeekendCoffee"],
     "description": "Make your audience feel the weekend comfort with coffee.",
     "videoUrl": "/videos/july/05.mp4",
-    "label": "Saturday Coffee Ritual"
+    "label": "Saturday Coffee Ritual",
+    "caption": "Embrace your Saturday morning ritual with our first cup of the day."
   },
   {
     "date": "2025-07-06",
@@ -51,7 +56,8 @@
     "hashtags": ["#TeamKapeSiglo", "#CoffeePeople", "#BaristaSpotlight"],
     "description": "Build trust and authenticity through your team.",
     "videoUrl": "/videos/july/06.mp4",
-    "label": "Meet the Barista"
+    "label": "Meet the Barista",
+    "caption": "Get to know the faces behind your favorite coffee."
   },
   {
     "date": "2025-07-07",
@@ -60,7 +66,8 @@
     "hashtags": ["#BestSeller", "#CustomerFave", "#KapeSiglo"],
     "description": "Use a visual hook to highlight your best drink.",
     "videoUrl": "/videos/july/07.mp4",
-    "label": "Best Seller Highlight"
+    "label": "Best Seller Highlight",
+    "caption": "Spotlight on our top-selling drink—loved by all!"
   },
   {
     "date": "2025-07-08",
@@ -69,7 +76,8 @@
     "hashtags": ["#WorkAndSip", "#CafeWork", "#ProductivityFuel"],
     "description": "Position your café as a good workspace too.",
     "videoUrl": "/videos/july/08.mp4",
-    "label": "Coffee & Productivity"
+    "label": "Coffee & Productivity",
+    "caption": "Fuel your focus with coffee in a cozy workspace."
   },
   {
     "date": "2025-07-09",
@@ -78,7 +86,8 @@
     "hashtags": ["#CoffeeTips", "#LearnWithKapeSiglo", "#HomeBrew"],
     "description": "Establish authority by sharing knowledge.",
     "videoUrl": "/videos/july/09.mp4",
-    "label": "Brewing Tips"
+    "label": "Brewing Tips",
+    "caption": "Learn simple tips to upgrade your home coffee game."
   },
   {
     "date": "2025-07-10",
@@ -87,7 +96,8 @@
     "hashtags": ["#CoffeeHumor", "#KapeSiglo", "#Relatable"],
     "description": "Lighten the mood with humor your audience relates to.",
     "videoUrl": "/videos/july/10.mp4",
-    "label": "Coffee Meme Day"
+    "label": "Coffee Meme Day",
+    "caption": "Laugh along with us as coffee meets memes!"
   },
   {
     "date": "2025-07-11",
@@ -96,7 +106,8 @@
     "hashtags": ["#LocalSupport", "#KapeSigloCommunity", "#CoffeeTogether"],
     "description": "Make followers feel part of something bigger.",
     "videoUrl": "/videos/july/11.mp4",
-    "label": "Community Feature"
+    "label": "Community Feature",
+    "caption": "Celebrate the amazing people who support KapeSiglo."
   },
   {
     "date": "2025-07-12",
@@ -105,7 +116,8 @@
     "hashtags": ["#LatteArt", "#BaristaGoals", "#KapeSiglo"],
     "description": "Visual satisfaction + barista skill = engagement.",
     "videoUrl": "/videos/july/12.mp4",
-    "label": "Latte Art Showcase"
+    "label": "Latte Art Showcase",
+    "caption": "Watch the magic of latte art unfold in slow motion."
   },
   {
     "date": "2025-07-13",
@@ -114,7 +126,8 @@
     "hashtags": ["#SundayMood", "#ChillAtKapeSiglo", "#CoffeeAndCalm"],
     "description": "Promote a slow day experience with your coffee.",
     "videoUrl": "/videos/july/13.mp4",
-    "label": "Sunday Chill"
+    "label": "Sunday Chill",
+    "caption": "Unwind this Sunday with a chill cup of coffee."
   },
   {
     "date": "2025-07-14",
@@ -123,7 +136,8 @@
     "hashtags": ["#CoffeeQuiz", "#FunWithKapeSiglo", "#TriviaTuesday"],
     "description": "Make learning about coffee interactive and fun.",
     "videoUrl": "/videos/july/14.mp4",
-    "label": "Coffee Quiz"
+    "label": "Coffee Quiz",
+    "caption": "Time to test your coffee knowledge—are you a true fan?"
   },
   {
     "date": "2025-07-15",
@@ -132,7 +146,8 @@
     "hashtags": ["#FarmToCup", "#PhilippineCoffee", "#KapeSiglo"],
     "description": "Be transparent and proud about your sourcing.",
     "videoUrl": "/videos/july/15.mp4",
-    "label": "Behind the Beans"
+    "label": "Behind the Beans",
+    "caption": "See where our beans come from—local and proud."
   },
   {
     "date": "2025-07-16",
@@ -141,7 +156,8 @@
     "hashtags": ["#MidweekBoost", "#CoffeeMotivation", "#KapeSiglo"],
     "description": "Keep your audience inspired and caffeinated.",
     "videoUrl": "/videos/july/16.mp4",
-    "label": "Midweek Motivation"
+    "label": "Midweek Motivation",
+    "caption": "Get over the hump with a motivational sip!"
   },
   {
     "date": "2025-07-17",
@@ -150,7 +166,8 @@
     "hashtags": ["#CoffeeAndDessert", "#KapeSigloMenu", "#PerfectPair"],
     "description": "Mouthwatering visuals drive orders and interest.",
     "videoUrl": "/videos/july/17.mp4",
-    "label": "Kape + Dessert Combo"
+    "label": "Kape + Dessert Combo",
+    "caption": "Dessert and coffee: name a better duo—we'll wait."
   },
   {
     "date": "2025-07-18",
@@ -159,7 +176,8 @@
     "hashtags": ["#FlashbackFriday", "#KapeJourney", "#SmallBizGrowth"],
     "description": "Celebrate how far you’ve come with your audience.",
     "videoUrl": "/videos/july/18.mp4",
-    "label": "Flashback Friday"
+    "label": "Flashback Friday",
+    "caption": "Throwing it back to our humble beginnings."
   },
   {
     "date": "2025-07-19",
@@ -168,7 +186,8 @@
     "hashtags": ["#TasteTest", "#KapeSigloExperience", "#HappyCustomers"],
     "description": "Real reactions build credibility.",
     "videoUrl": "/videos/july/19.mp4",
-    "label": "Customer Reactions"
+    "label": "Customer Reactions",
+    "caption": "Watch real customers try and react to something new!"
   },
   {
     "date": "2025-07-20",
@@ -177,7 +196,8 @@
     "hashtags": ["#CoffeeASMR", "#Satisfying", "#KapeSiglo"],
     "description": "Appeal to sensory enjoyment.",
     "videoUrl": "/videos/july/20.mp4",
-    "label": "Coffee Prep ASMR"
+    "label": "Coffee Prep ASMR",
+    "caption": "Satisfy your senses with relaxing coffee prep sounds."
   },
   {
     "date": "2025-07-21",
@@ -186,7 +206,8 @@
     "hashtags": ["#NewOnTheMenu", "#ComingSoon", "#KapeSiglo"],
     "description": "Create anticipation.",
     "videoUrl": "/videos/july/21.mp4",
-    "label": "New Item Tease"
+    "label": "New Item Tease",
+    "caption": "Something new is brewing—can you guess what it is?"
   },
   {
     "date": "2025-07-22",
@@ -195,7 +216,8 @@
     "hashtags": ["#SONA2025", "#CoffeeTalks", "#KapeSigloVoices"],
     "description": "Make coffee a platform for honest discussion.",
     "videoUrl": "/videos/july/21.mp4",
-    "label": "SONA Reflection"
+    "label": "SONA Reflection",
+    "caption": "Let’s reflect on change over coffee this SONA season."
   },
   {
     "date": "2025-07-23",
@@ -204,7 +226,8 @@
     "hashtags": ["#CafeTrends", "#KapeSigloStyle", "#ContentTrends"],
     "description": "Show you’re in touch with online culture.",
     "videoUrl": "/videos/july/21.mp4",
-    "label": "Recreate a Trend"
+    "label": "Recreate a Trend",
+    "caption": "Hop on the latest trend—KapeSiglo style!"
   },
   {
     "date": "2025-07-24",
@@ -213,7 +236,8 @@
     "hashtags": ["#AestheticCafe", "#CafeVibes", "#KapeSiglo"],
     "description": "Visuals that influencers and cafe lovers enjoy.",
     "videoUrl": "/videos/july/24.mp4",
-    "label": "Aesthetic Table Setup"
+    "label": "Aesthetic Table Setup",
+    "caption": "Feast your eyes on our beautifully set tables."
   },
   {
     "date": "2025-07-25",
@@ -222,7 +246,8 @@
     "hashtags": ["#SupportLocal", "#ArtistFeature", "#KapeSiglo"],
     "description": "Engage with the creative community.",
     "videoUrl": "/videos/july/25.mp4",
-    "label": "Feature a Local Artist"
+    "label": "Feature a Local Artist",
+    "caption": "Showcasing talent from our creative community."
   },
   {
     "date": "2025-07-26",
@@ -230,8 +255,9 @@
     "videoIdea": "Focus on merch, beans, or reusable cups.",
     "hashtags": ["#CoffeeMerch", "#KapeSiglo", "#ShopLocal"],
     "description": "Promote what else you sell outside drinks.",
-    "videoUrl": "/videos/july/26.mp4",
-    "label": "Product Spotlight"
+    "videoUrl": "/videos/july/21.mp4",
+    "label": "Product Spotlight",
+    "caption": "More than drinks—check out our featured products!"
   },
   {
     "date": "2025-07-27",
@@ -240,7 +266,8 @@
     "hashtags": ["#SmallBizStory", "#KapeSiglo", "#SundayTalk"],
     "description": "Add heart and personal values to your brand.",
     "videoUrl": "/videos/july/27.mp4",
-    "label": "Sunday Story"
+    "label": "Sunday Story",
+    "caption": "A heartfelt story straight from the heart of KapeSiglo."
   },
   {
     "date": "2025-07-28",
@@ -249,7 +276,8 @@
     "hashtags": ["#KapeSigloFans", "#UGC", "#ThankYou"],
     "description": "Show love to your supportive audience.",
     "videoUrl": "/videos/july/28.mp4",
-    "label": "UGC Appreciation"
+    "label": "UGC Appreciation",
+    "caption": "Thanks for sharing your moments at KapeSiglo!"
   },
   {
     "date": "2025-07-29",
@@ -258,7 +286,8 @@
     "hashtags": ["#CoffeeReasons", "#EngageWithUs", "#KapeSigloQOTD"],
     "description": "Encourage interaction in stories or comments.",
     "videoUrl": "/videos/july/29.mp4",
-    "label": "Question of the Day"
+    "label": "Question of the Day",
+    "caption": "Tell us—why do you love coffee?"
   },
   {
     "date": "2025-07-30",
@@ -267,7 +296,8 @@
     "hashtags": ["#MonthInReview", "#JulyWithKapeSiglo", "#ContentCalendar"],
     "description": "Celebrate your consistency and creativity.",
     "videoUrl": "/videos/july/30.mp4",
-    "label": "July Recap"
+    "label": "July Recap",
+    "caption": "A look back at all the good vibes this July!"
   },
   {
     "date": "2025-07-31",
@@ -276,6 +306,7 @@
     "hashtags": ["#CommunityDriven", "#PlanWithUs", "#KapeSiglo"],
     "description": "Involve followers in your August planning.",
     "videoUrl": "/videos/july/31.mp4",
-    "label": "Ask Your Audience"
+    "label": "Ask Your Audience",
+    "caption": "What content would you love to see next month?"
   }
 ]

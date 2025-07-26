@@ -1,36 +1,34 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // 👈 include useNavigate
 import './Navbar.css';
 
 const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
   const location = useLocation();
+  const navigate = useNavigate(); // 👈 initialize navigate
   const isContactPage = location.pathname === '/contact';
   const isPaymentPage = location.pathname === '/payment';
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogout = () => {
     setShowLogoutModal(false);
-    onLogoutClick(); // Trigger actual logout logic
+    onLogoutClick();
+    navigate('/'); // 👈 redirect to Home
   };
 
   return (
     <>
-      <nav className={`content-navbar ${isContactPage ? 'solid-navbar' : isPaymentPage ? 'solid-navbar':''}`}>
-        {/* Left: Logo or Greeting */}
+      <nav className={`content-navbar ${isContactPage || isPaymentPage ? 'solid-navbar' : ''}`}>
         <div className="content-navbar-logo">
           <p className="content-navbar-logo-text">
             {isLoggedIn ? 'Welcome, Kape Siglo' : 'ContentPlanner'}
           </p>
         </div>
 
-        {/* Center: Navigation Links */}
         <ul className="content-navbar-menu">
           <li className={`content-navbar-menu-item ${location.pathname === '/' ? 'active' : ''}`}>
             <Link to="/" className="content-link">Home</Link>
           </li>
-          <li
-            className={`content-navbar-menu-item ${location.pathname === '/calendar' ? 'active' : ''}`}
-          >
+          <li className={`content-navbar-menu-item ${location.pathname === '/calendar' ? 'active' : ''}`}>
             {isLoggedIn ? (
               <Link to="/calendar" className="content-link">Content Calendar</Link>
             ) : (
@@ -45,7 +43,6 @@ const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
           </li>
         </ul>
 
-        {/* Right: Login/Logout */}
         <div className="content-navbar-auth">
           {isLoggedIn ? (
             <button className="btn-login-transparent" onClick={() => setShowLogoutModal(true)}>
@@ -59,7 +56,6 @@ const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
         </div>
       </nav>
 
-      {/* === Logout Confirmation Modal === */}
       {showLogoutModal && (
         <div className="logout-modal-overlay">
           <div className="logout-modal">

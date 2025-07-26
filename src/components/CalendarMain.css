@@ -1,0 +1,83 @@
+/* Modal Container */
+.modal-content {
+  background-color: var(--background-light);
+  border-radius: 12px;
+  border: none;
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom: none;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.modal-body ul {
+  padding-left: 1.2rem;
+}
+
+.modal-body li {
+  list-style-type: disc;
+}
+
+/* Modal Footer */
+.modal-footer {
+  background-color: transparent;
+  border-top: none;
+  justify-content: flex-end;
+}
+
+/* Close Button (X) */
+.btn-close {
+  filter: brightness(0) invert(1);
+}
+
+/* Close Button in Footer */
+.modal-footer .btn-secondary {
+  background-color: var(--button-color);
+  border: none;
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: var(--button-hover);
+}
+
+
+/* FullCalendar Styling */
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.fc-daygrid-day-number {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.fc .fc-daygrid-event {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 0.85rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

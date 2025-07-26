@@ -8,6 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import contentData from '../data/julyContent.json';
 
+// July holidays
 const holidayEventsJuly = [
   {
     title: 'Eid al-Adha (Tentative)',
@@ -18,6 +19,45 @@ const holidayEventsJuly = [
     title: 'SONA (State of the Nation Address)',
     date: '2025-07-22',
     color: '#ff9999'
+  }
+];
+
+// November & December Philippine holidays
+const holidayEventsNovemberDecember = [
+  {
+    title: 'All Saints’ Day (Undas)',
+    date: '2025-11-01',
+    color: '#ffcc99'
+  },
+  {
+    title: 'All Souls’ Day',
+    date: '2025-11-02',
+    color: '#ffcc99'
+  },
+  {
+    title: 'Bonifacio Day',
+    date: '2025-11-30',
+    color: '#ffb366'
+  },
+  {
+    title: 'Feast of the Immaculate Conception',
+    date: '2025-12-08',
+    color: '#ccffff'
+  },
+  {
+    title: 'Christmas Day',
+    date: '2025-12-25',
+    color: '#66cc66'
+  },
+  {
+    title: 'Rizal Day',
+    date: '2025-12-30',
+    color: '#99ccff'
+  },
+  {
+    title: 'New Year’s Eve',
+    date: '2025-12-31',
+    color: '#cccccc'
   }
 ];
 
@@ -48,7 +88,7 @@ const CalendarMain = ({ onMonthChange }) => {
     }
   };
 
-   const handleDatesSet = (dateInfo) => {
+  const handleDatesSet = (dateInfo) => {
     const currentMonth = dateInfo.start.getMonth(); // 0-indexed
     const currentYear = dateInfo.start.getFullYear();
     onMonthChange({ month: currentMonth, year: currentYear });
@@ -61,7 +101,11 @@ const CalendarMain = ({ onMonthChange }) => {
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
-        events={[...events, ...holidayEventsJuly]}
+        events={[
+          ...events,
+          ...holidayEventsJuly,
+          ...holidayEventsNovemberDecember
+        ]}
         showNonCurrentDates={false}
         fixedWeekCount={false}
         dateClick={handleDateClick}
@@ -78,6 +122,7 @@ const CalendarMain = ({ onMonthChange }) => {
           <p><strong>Date:</strong> {selectedContent?.date}</p>
           <p><strong>Video Idea:</strong> {selectedContent?.videoIdea}</p>
           <p><strong>Description:</strong> {selectedContent?.description}</p>
+          <p><strong>Captions:</strong> {selectedContent?.caption}</p>
           <p><strong>Hashtags:</strong></p>
           <ul>
             {selectedContent?.hashtags.map((tag, i) => (
