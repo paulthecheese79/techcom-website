@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Welcome.css';
 import agendaData from '../data/julyContent.json';
 
-const Welcome = ({ isLoggedIn }) => {
+const Welcome = ({ isLoggedIn, onLoginClick }) => {
   const [todayAgenda, setTodayAgenda] = useState(null);
 
   useEffect(() => {
@@ -91,12 +91,12 @@ const Welcome = ({ isLoggedIn }) => {
                 <span style={{ color: 'var(--warning-color)', fontWeight: 'bold' }}>Seize the day</span><br />
                 <span style={{ color: 'white', fontWeight: 'bold' }}> with ContentPlanner!</span>
               </h2>
-              <button className="btn btn-light btn-lg mt-3">Sign Up Now</button>
+              <button className="btn btn-light btn-lg mt-3" onClick={onLoginClick}>
+                Sign Up Now
+              </button>
             </div>
           </div>
         </section>
-
-
       )}
 
       {/* === Carousel Section === */}
@@ -123,8 +123,6 @@ const Welcome = ({ isLoggedIn }) => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      
     </div>
   );
 };

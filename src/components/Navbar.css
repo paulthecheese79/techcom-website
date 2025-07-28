@@ -1,4 +1,4 @@
-/* Transparent fixed navbar */
+/* === NAVBAR MAIN === */
 .content-navbar {
   position: absolute;
   top: 0;
@@ -7,38 +7,45 @@
   padding: 16px 40px;
   display: flex;
   align-items: center;
-  background-color: transparent;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
   color: white;
 }
 
-/* Logo left */
+/* === LOGO LEFT === */
 .content-navbar-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  height: 100%;  
 }
 
-.content-navbar-logo-icon {
-  font-size: 1.8rem;
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;  
 }
 
 .content-navbar-logo-text {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  line-height: 1;         /* Prevent vertical misalignment */
+  margin: 0;              /* Remove any default margin */
+  padding: 0;  
 }
 
-/* Center nav links */
+/* === CENTER NAV LINKS === */
 .content-navbar-menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .content-navbar-menu-item {
@@ -53,28 +60,33 @@
   color: white;
   font-size: 1rem;
   font-weight: 500;
+  transition: transform 0.2s ease, font-weight 0.2s ease;
+}
+
+.content-link:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 .content-navbar-menu-item hr {
   border: none;
   height: 2px;
   width: 100%;
-  background-color: transparent;
-  transition: 0.2s ease;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s ease;
 }
 
 .content-navbar-menu-item.active hr {
   background-color: white;
 }
 
-/* Right button */
+/* === RIGHT BUTTON === */
 .content-navbar-auth {
-  margin-left: auto;
   flex-shrink: 0;
 }
 
-.content-navbar-auth button.btn-login-transparent {
-  background-color: transparent;
+.btn-login-transparent {
+  background-color: var(--primary-color);
   color: white;
   border: 2px solid white;
   border-radius: 30px;
@@ -85,55 +97,18 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.content-navbar-auth button.btn-login-transparent:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Mobile responsive */
-@media screen and (max-width: 768px) {
-  .content-navbar-menu {
-    display: none;
-  }
-  .content-navbar-auth {
-    display: none;
-  }
-}
-
-/* Disable Link When Not Logged In */
-.disabled-link {
-  color: #999;
-  pointer-events: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Hover Effects for Center Links */
-.content-link {
-  transition: transform 0.2s ease, font-weight 0.2s ease;
-}
-
-.content-link:hover {
-  transform: scale(1.1);
-  font-weight: bold;
-}
-
-/* Transparent Login Button */
-.btn-login-transparent {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: background 0.3s ease;
-}
-
 .btn-login-transparent:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Modal Styles */
-/* Modal Overlay */
+/* === DISABLED LINK === */
+.disabled-link {
+  color: #999;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+/* === MODAL STYLES === */
 .logout-modal-overlay {
   position: fixed;
   top: 0;
@@ -147,9 +122,7 @@
   z-index: 999;
 }
 
-/* Modal Container */
 .logout-modal {
-  position: relative;
   background-color: var(--background-light);
   padding: 2rem 2.5rem;
   border-radius: 12px;
@@ -160,44 +133,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Close (X) Button */
-.logout-close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-.logout-close-button:hover {
-  color: var(--button-hover);
-}
-
-/* Modal Title */
-.logout-modal h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-/* Modal Message */
 .logout-modal p {
   font-size: 1rem;
   color: var(--secondary-color);
   margin-bottom: 1.5rem;
 }
 
-/* Button Group */
 .logout-modal-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-/* Confirm and Cancel Buttons */
 .logout-modal-buttons button {
   padding: 0.6rem 1.4rem;
   font-size: 0.95rem;
@@ -207,29 +154,116 @@
   transition: background-color 0.2s ease;
 }
 
-.logout-modal-buttons .confirm-btn {
+.confirm-btn {
   background-color: var(--button-color);
   color: var(--text-color);
 }
 
-.logout-modal-buttons .confirm-btn:hover {
+.confirm-btn:hover {
   background-color: var(--button-hover);
 }
 
-.logout-modal-buttons .cancel-btn {
+.cancel-btn {
   background-color: transparent;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
-.logout-modal-buttons .cancel-btn:hover {
+.cancel-btn:hover {
   background-color: var(--primary-color);
   color: var(--text-color);
 }
 
-/* Contact Page Navbar */
+/* === SOLID NAVBAR FOR CONTACT/PAYMENT PAGE === */
 .solid-navbar {
   position: sticky;
-  background-color: var(--primary-color); /* or any solid color from root */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional shadow */
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* === HAMBURGER MENU FOR MOBILE === */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media screen and (max-width: 1000px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .content-navbar-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    text-align: left;
+    transform-origin: top;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .content-navbar-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .content-navbar-menu-item {
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+  }
+
+  .content-navbar-menu-item .content-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .content-navbar-menu-item .content-link:hover {
+    color: var(--accent-color, #ccc); /* Light gray on hover */
+  }
+
+  .content-navbar-menu-item.active .content-link {
+    font-weight: 600;
+    color: white;
+  }
+
+  .content-navbar-auth {
+    display: none;
+  }
+}
+
+
+/*Welcome Text*/
+.welcome-text {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }

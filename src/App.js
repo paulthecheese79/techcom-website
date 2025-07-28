@@ -32,7 +32,7 @@ function App() {
       />
       {showModal && <LoginModal onClose={() => setShowModal(false)} onLogin={handleLogin} />}
       <Routes>
-        <Route path="/" element={<Welcome isLoggedIn={isLoggedIn} />} />
+        <Route path="/" element={<Welcome isLoggedIn={isLoggedIn} onLoginClick={() => setShowModal(true)}/>} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/payment" element={<Payment />} />
