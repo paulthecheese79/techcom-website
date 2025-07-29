@@ -1,6 +1,6 @@
 // App.jsx
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom'; // ❌ Don't import BrowserRouter here
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Welcome from './pages/Welcome';
 import Calendar from './pages/Calendar';
@@ -13,6 +13,23 @@ import Footer from './components/Footer';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  // Redirect to home on refresh
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      // Only redirect if we're not already on the home page
+      if (window.location.pathname !== '/') {
+        navigate('/', { replace: true });
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [navigate]);
 
   const handleLogin = () => {
     setIsLoggedIn(true);

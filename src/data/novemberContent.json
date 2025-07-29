@@ -1,6 +1,18 @@
 [
   {
-    "date": "2025-11-02",
+    "date": "2025-11-01",
+    "scheduledTime": "08:45",
+    "theme": "All Saints’ Day Tribute",
+    "videoIdea": "Create a peaceful candlelight tribute reel.",
+    "hashtags": ["#Undas2025", "#KapeSiglo", "#PaggunitaAtPanalangin", "#AlaalaAtKape"],
+    "description": "Honor the memory of loved ones with a calm and respectful post.",
+    "videoUrl": "/videos/november/01.mp4",
+    "imageUrl": "/images/pubmats/nov1.png",
+    "label": "All Saints’ Day Tribute",
+    "caption": "☕ Sa araw ng paggunita, nawa’y magsilbing init ng kape ang yakap ng alaala. Isang mapayapang Undas mula sa Kape Siglo. 🤍🕯️"
+  },
+  {
+    "date": "2025-11-03",
     "scheduledTime": "07:00",
     "theme": "3rd Anniversary Celebration",
     "videoIdea": "Create an exciting anniversary reel featuring customer highlights and coffee preparation",
@@ -10,20 +22,9 @@
     "label": "Anniversary Special",
     "caption": "🎉 Makisaya sa aming ika-3 anibersaryo!\n🧊 May 20% off sa lahat ng iced coffee drinks ngayong Lunes lang!\n📍 Available lang sa mismong araw at sa loob ng aming store.",
     "imageUrl": "/images/pubmats/nov2.png"
-},
-  {
-  "date": "2025-11-02",
-  "scheduledTime": "09:40",
-  "theme": "KapeSiglo Turns 3!",
-  "videoIdea": "A nostalgic recap of our journey—clips from store moments, customers, and signature brews.",
-  "hashtags": ["#KapeSigloTurns3", "#TatlongTaonNgTimpla", "#KapengMayKwento", "#SalamatSaTatlongTaon"],
-  "description": "Celebrate three years of stories, community, and every cup shared. Thank you for brewing with us!",
-  "videoUrl": "/videos/november/02.mp4",
-  "label": "3rd Anniversary Special",
-  "caption": "🎈Abangan ang aming mga pasabog ngayong anibersaryo!"
   },
   {
-    "date": "2025-11-03",
+    "date": "2025-11-04",
     "scheduledTime": "08:00",
     "theme": "Anniversary Gratitude",
     "videoIdea": "Create a thank you reel featuring customer moments and staff appreciation",
@@ -35,15 +36,16 @@
     "imageUrl": "/images/pubmats/nov3.png"
   },
   {
-    "date": "2025-11-04",
-    "scheduledTime":"11:45",
-    "theme": "Favorite Mug Day",
-    "videoIdea": "Staff share their favorite mugs and stories behind them.",
-    "hashtags": ["#MugLife", "#CoffeePersonality", "#KapeSiglo"],
-    "description": "Celebrate the little things that make coffee personal.",
-    "videoUrl": "/videos/november/04.mp4",
-    "label": "Favorite Mug Day",
-    "caption": "Every mug has a story. What’s yours?"
+    "date": "2025-11-02",
+    "scheduledTime": "06:00",
+    "theme": "All Souls' Day Remembrance",
+    "videoIdea": "Create a peaceful tribute with candles and coffee offerings",
+    "hashtags": ["#Undas2025", "#AlaalaAtKape", "#Paggunita", "#KapeSiglo"],
+    "description": "A solemn tribute honoring departed loved ones with coffee rituals",
+    "videoUrl": "/videos/november/02.mp4",
+    "label": "All Souls' Day",
+    "caption": "☕ Sa araw ng pag-alala, nag-aalay kami ng kape bilang paalala sa mga minamahal nating pumanaw. Ang init ng kape ay gaya ng init ng pagmamahalang hindi nawawala. 🕯️"
+    
   },
   {
     "date": "2025-11-05",
