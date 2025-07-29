@@ -1,16 +1,16 @@
 [
   {
-    "date": "2025-11-01",
-    "scheduledTime": "08:45",
-    "theme": "All Saints’ Day Tribute",
-    "videoIdea": "Create a peaceful candlelight tribute reel.",
-    "hashtags": ["#Undas2025", "#KapeSiglo", "#PaggunitaAtPanalangin", "#AlaalaAtKape"],
-    "description": "Honor the memory of loved ones with a calm and respectful post.",
-    "videoUrl": "/videos/november/01.mp4",
-    "imageUrl": "/images/pubmats/nov1.png",
-    "label": "All Saints’ Day Tribute",
-    "caption": "☕ Sa araw ng paggunita, nawa’y magsilbing init ng kape ang yakap ng alaala. Isang mapayapang Undas mula sa Kape Siglo. 🤍🕯️"
-  },
+    "date": "2025-11-02",
+    "scheduledTime": "07:00",
+    "theme": "3rd Anniversary Celebration",
+    "videoIdea": "Create an exciting anniversary reel featuring customer highlights and coffee preparation",
+    "hashtags": ["#KapeSigloTurns3", "#TatlongTaonNgTimpla", "#KapengMayKwento", "#SalamatSaTatlongTaon"],
+    "description": "Celebrate our 3rd anniversary with special discounts on iced coffee drinks",
+    "videoUrl": "/videos/november/02.mp4",
+    "label": "Anniversary Special",
+    "caption": "🎉 Makisaya sa aming ika-3 anibersaryo!\n🧊 May 20% off sa lahat ng iced coffee drinks ngayong Lunes lang!\n📍 Available lang sa mismong araw at sa loob ng aming store.",
+    "imageUrl": "/images/pubmats/nov2.png"
+},
   {
   "date": "2025-11-02",
   "scheduledTime": "09:40",
@@ -24,14 +24,15 @@
   },
   {
     "date": "2025-11-03",
-    "scheduledTime":"10:30",
-    "theme": "Monday Kickstart",
-    "videoIdea": "Upbeat video of baristas prepping for the week.",
-    "hashtags": ["#MondayMotivation", "#KapeSiglo", "#StartStrong"],
-    "description": "Welcome the new work week with caffeine and smiles.",
+    "scheduledTime": "08:00",
+    "theme": "Anniversary Gratitude",
+    "videoIdea": "Create a thank you reel featuring customer moments and staff appreciation",
+    "hashtags": ["#KapeSigloTurns3", "#TatlongTaonNgTimpla", "#KapengMayKwento", "#SalamatSaTatlongTaon"],
+    "description": "Express gratitude for 3 years of customer support and love",
     "videoUrl": "/videos/november/03.mp4",
-    "label": "Monday Kickstart",
-    "caption": "Fresh brews and fresh starts—let's make this week count!"
+    "label": "Anniversary Thanks",
+    "caption": "🎈 3 taon ng suporta at pagmamahal sa Kape Siglo❤️",
+    "imageUrl": "/images/pubmats/nov3.png"
   },
   {
     "date": "2025-11-04",
