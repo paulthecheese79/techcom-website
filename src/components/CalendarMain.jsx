@@ -120,6 +120,41 @@ const CalendarMain = ({ onMonthChange }) => {
                     objectFit: 'contain'
                   }}
                 />
+                {/* Image Action Buttons */}
+                <div className="image-actions">
+                  <Button 
+                    variant="primary" 
+                    size="sm"
+                    style={{
+                      backgroundColor: 'var(--button-color)',
+                      borderColor: 'var(--button-color)'
+                    }}
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = selectedContent.imageUrl;
+                      link.download = `kapesiglo-${selectedContent.date}.jpg`;
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    Download Image
+                  </Button>
+                  {selectedContent?.canvaLink && (
+                    <Button 
+                      variant="success" 
+                      size="sm"
+                      style={{
+                        backgroundColor: 'var(--accent-color)',
+                        borderColor: 'var(--accent-color)',
+                        marginLeft: '10px'
+                      }}
+                      onClick={() => window.open(selectedContent.canvaLink, '_blank')}
+                    >
+                      Open in Canva
+                    </Button>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -143,7 +178,9 @@ const CalendarMain = ({ onMonthChange }) => {
               <p><strong>Scheduled Time:</strong> {selectedContent?.scheduledTime}</p>
               <p><strong>Video Idea:</strong> {selectedContent?.videoIdea}</p>
               <p><strong>Description:</strong> {selectedContent?.description}</p>
-              <p><strong>Caption:</strong> {selectedContent?.caption}</p>
+              <p><strong>Caption:</strong>
+              <div className="caption-text">{selectedContent?.caption}</div>
+              </p>
               <p><strong>Hashtags:</strong></p>
               <ul>
                 {selectedContent?.hashtags?.map((tag, i) => (

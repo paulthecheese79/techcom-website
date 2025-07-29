@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const isContactPage = location.pathname === '/contact';
   const isPaymentPage = location.pathname === '/payment';
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleLogout = () => {
     setShowLogoutModal(false);
@@ -15,40 +30,65 @@ const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
     navigate('/');
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <nav className={`content-navbar ${isContactPage || isPaymentPage ? 'solid-navbar' : ''}`}>
-        {/* === Left: Logo === */}
+        {/* Logo */}
         <div className="content-navbar-logo">
-          <img src="/images/logo.png" alt="ContentPlanner Logo" className="logo-img" />
-          <p className="content-navbar-logo-text">ContentPlanner</p>
+          {windowWidth > 600 ? (
+            <>
+              <img src="/images/logo.png" alt="ContentPlanner Logo" className="logo-img" />
+              <p className="content-navbar-logo-text">Schedura</p>
+            </>
+          ) : (
+            <img src="/images/logo.png" alt="Logo" className="logo-icon" />
+          )}
         </div>
 
-        {/* === Center: Links === */}
-        <ul className="content-navbar-menu">
+        {/* Hamburger Menu (Mobile Only) */}
+        <button 
+          className="hamburger-menu" 
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+        >
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+        </button>
+
+        {/* Navigation Links */}
+        <ul className={`content-navbar-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <li className={`content-navbar-menu-item ${location.pathname === '/' ? 'active' : ''}`}>
-            <Link to="/" className="content-link">Home</Link>
+            <Link to="/" className="content-link" onClick={closeMobileMenu}>Home</Link>
           </li>
+          
           <li className={`content-navbar-menu-item ${location.pathname === '/calendar' ? 'active' : ''}`}>
             {isLoggedIn ? (
-              <Link to="/calendar" className="content-link">Content Calendar</Link>
+              <Link to="/calendar" className="content-link" onClick={closeMobileMenu}>Content Calendar</Link>
             ) : (
               <span className="content-link disabled-link">Content Calendar</span>
             )}
           </li>
+
           <li className={`content-navbar-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>
-            <Link to="/contact" className="content-link">Contact</Link>
+            <Link to="/contact" className="content-link" onClick={closeMobileMenu}>Contact</Link>
           </li>
           <li className={`content-navbar-menu-item ${location.pathname === '/payment' ? 'active' : ''}`}>
-            <Link to="/payment" className="content-link">Payment</Link>
+            <Link to="/payment" className="content-link" onClick={closeMobileMenu}>Payment</Link>
           </li>
         </ul>
 
-        {/* === Right: Greeting + Auth Buttons === */}
-        <div className="content-navbar-auth d-flex align-items-center gap-3">
-          {isLoggedIn && (
-            <span className="welcome-text">Welcome, KapeSiglo</span>
-          )}
+        {/* Auth Section */}
+        <div className={`content-navbar-auth ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          {isLoggedIn && <span className="welcome-text">Welcome, KapeSiglo</span>}
           {isLoggedIn ? (
             <button className="btn-login-transparent" onClick={() => setShowLogoutModal(true)}>
               Logout
@@ -61,7 +101,7 @@ const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
         </div>
       </nav>
 
-      {/* === Logout Modal === */}
+      {/* Logout Modal */}
       {showLogoutModal && (
         <div className="logout-modal-overlay">
           <div className="logout-modal">
@@ -73,6 +113,9 @@ const Navbar = ({ onLoginClick, onLogoutClick, isLoggedIn }) => {
           </div>
         </div>
       )}
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={closeMobileMenu}></div>}
     </>
   );
 };

@@ -92,8 +92,21 @@
 }
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--footer-background);
   color: var(--footer-text);
+}
+
+.footer-logo {
+  height: 60px; /* Adjust as needed */
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+  opacity: 1;
 }

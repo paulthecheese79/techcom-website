@@ -3,12 +3,14 @@ import React from 'react';
 import './CalendarSidebar.css';
 import julyContent from '../data/julyContent.json';
 import novemberContent from '../data/novemberContent.json';
+import decemberContent from '../data/decemberContent.json';
 
 
 const monthMap = {
 
   6: { name: 'July', data: julyContent },
   10: { name: 'November', data: novemberContent },
+  11: { name: 'December', data: decemberContent },
 
 };
 
