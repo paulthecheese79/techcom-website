@@ -14,7 +14,7 @@ const CalendarMain = ({ onMonthChange }) => {
   const [contentData, setContentData] = useState(julyContent);
   const [showModal, setShowModal] = useState(false);
   const [selectedContent, setSelectedContent] = useState(null);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [showImagePanel, setShowImagePanel] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Holiday events data
@@ -48,7 +48,7 @@ const CalendarMain = ({ onMonthChange }) => {
     if (content) {
       setSelectedContent(content);
       setShowModal(true);
-      setIsExpanded(false);
+      setShowImagePanel(false);
       setImageLoaded(false);
     }
   };
@@ -67,7 +67,7 @@ const CalendarMain = ({ onMonthChange }) => {
   };
 
   const handleClose = () => setShowModal(false);
-  const handleToggleExpand = () => setIsExpanded(!isExpanded);
+  const toggleImagePanel = () => setShowImagePanel(!showImagePanel);
 
   return (
     <>
@@ -88,16 +88,15 @@ const CalendarMain = ({ onMonthChange }) => {
         }}
       />
 
-      {/* Enhanced Modal with Left-side Expansion */}
       <Modal 
         show={showModal} 
         onHide={handleClose}
-        dialogClassName={`custom-modal ${isExpanded ? 'expanded' : ''}`}
-        size="xl" // Added for better base sizing
+        dialogClassName={`custom-modal ${showImagePanel ? 'expanded' : ''}`}
+        size="xl"
       >
         <div className="modal-content-wrapper">
-          {/* Image Panel - Now Wider */}
-          <div className={`image-panel ${isExpanded ? 'visible' : ''}`}>
+          {/* Image Panel */}
+          <div className={`image-panel ${showImagePanel ? 'visible' : ''}`}>
             {selectedContent?.imageUrl && (
               <div className="image-container">
                 {!imageLoaded && (
@@ -120,7 +119,6 @@ const CalendarMain = ({ onMonthChange }) => {
                     objectFit: 'contain'
                   }}
                 />
-                {/* Image Action Buttons */}
                 <div className="image-actions">
                   <Button 
                     variant="primary" 
@@ -159,16 +157,7 @@ const CalendarMain = ({ onMonthChange }) => {
             )}
           </div>
 
-          {/* Toggle Button */}
-          <div className={`expand-toggle ${isExpanded ? 'expanded' : ''}`} onClick={handleToggleExpand}>
-            <div className="semi-circle">
-              <span className={`arrow ${isExpanded ? 'flipped' : ''}`}>
-                {isExpanded ? '←' : '→'}
-              </span>
-            </div>
-          </div>
-
-          {/* Main Content (Right Side) */}
+          {/* Main Content */}
           <div className="main-modal-content">
             <Modal.Header closeButton>
               <Modal.Title>{selectedContent?.theme}</Modal.Title>
@@ -189,6 +178,17 @@ const CalendarMain = ({ onMonthChange }) => {
               </ul>
             </Modal.Body>
             <Modal.Footer>
+              <div className="preview-link-container">
+                {!showImagePanel && (
+                  <Button 
+                    variant="link" 
+                    className="preview-link"
+                    onClick={toggleImagePanel}
+                  >
+                    ← Preview Image
+                  </Button>
+                )}
+              </div>
               <Button variant="secondary" onClick={handleClose}>Close</Button>
             </Modal.Footer>
           </div>
